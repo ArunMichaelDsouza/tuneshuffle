@@ -1,0 +1,23 @@
+{
+  "name": "tuneshuffle",
+  "version": "1.0.0",
+  "description": "Web-based localised music player. Start a server locally, ask your friends to join in, share and stream music together!",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.15.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArunMichaelDsouza/tuneshuffle.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ArunMichaelDsouza/tuneshuffle/issues"
+  },
+  "homepage": "https://github.com/ArunMichaelDsouza/tuneshuffle#readme"
+}
