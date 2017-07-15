@@ -2,5 +2,6 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import constants from '../lib/constants';
 
-ReactDOM.render(<div>Tuneshuffle</div>, document.getElementById('app'));
+ReactDOM.render(<div> { constants.APP_TITLE } </div>, document.getElementById('app'));

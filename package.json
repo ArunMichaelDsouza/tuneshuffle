@@ -4,6 +4,7 @@
   "description": "Web-based localised music player. Start a server locally, ask your friends to join in, share and stream music together!",
   "main": "index.js",
   "dependencies": {
+    "body-parser": "^1.17.2",
     "cli-color": "^1.2.0",
     "express": "^4.15.3",
     "nedb": "^1.8.0",
