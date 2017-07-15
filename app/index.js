@@ -7,6 +7,9 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import allReducers from './reducers/index';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import Welcome from './components/Welcome.jsx';
+import Player from './components/Player.jsx';
 
 const initialState = { users: [] };
 
@@ -25,5 +28,17 @@ store.dispatch({ type: 'INIT_STORE', payload: initialState });
 
 ReactDOM.render(
 	<Provider store={store}>
-		<div> { constants.APP_TITLE } </div>
+		<Router>
+			<div>
+		     	<ul>
+		        	<li><Link to="/welcome">welcome</Link></li>
+		        	<li><Link to="/player">player</Link></li>
+		      	</ul>
+
+		      <hr/>
+
+		      <Route exact path="/welcome" component={Welcome}/>
+		      <Route path="/player" component={Player}/>
+		    </div>
+		  </Router>
 	</Provider>, document.getElementById('app'));

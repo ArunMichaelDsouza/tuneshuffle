@@ -37,7 +37,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.locals.constants = constants;
 
 // Setup default route
-app.get('/', (req, res) => res.render('index'));
+app.get('*', (req, res) => res.render('index'));
 
 // Run app server on specified port
 app.listen(constants.PORT, () => {
