@@ -4,6 +4,8 @@
   "description": "Web-based localised music player. Start a server locally, ask your friends to join in, share and stream music together!",
   "main": "index.js",
   "dependencies": {
+    "axios": "^0.16.2",
+    "babel-preset-stage-2": "^6.24.1",
     "body-parser": "^1.17.2",
     "cli-color": "^1.2.0",
     "cookie-parser": "^1.4.3",
@@ -12,6 +14,9 @@
     "pug": "^2.0.0-rc.2",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "react-redux": "^5.0.5",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0",
     "woodlot": "^3.0.3"
   },
   "devDependencies": {
