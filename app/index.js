@@ -7,7 +7,7 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import allReducers from './reducers/index';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Welcome from './components/Welcome.jsx';
 import Player from './components/Player.jsx';
 
@@ -26,6 +26,12 @@ const store = createStore(allReducers, initialState, enhancer);
 
 store.dispatch({ type: 'INIT_STORE', payload: initialState });
 
+const NoMatch = () => {
+	return (
+		<div>no match</div>
+	);
+};
+
 ReactDOM.render(
 	<Provider store={store}>
 		<Router>
@@ -37,8 +43,11 @@ ReactDOM.render(
 
 		      <hr/>
 
-		      <Route exact path="/welcome" component={Welcome}/>
-		      <Route path="/player" component={Player}/>
+		      <Switch>
+			      <Route exact path="/welcome" component={Welcome}/>
+			      <Route path="/player" component={Player}/>
+			      <Route component={NoMatch}/>
+			   </Switch>
 		    </div>
 		  </Router>
 	</Provider>, document.getElementById('app'));
