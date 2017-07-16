@@ -1,0 +1,23 @@
+// Button component
+
+%btn-base {
+	padding: 15px 25px;
+	border-radius: 3px;
+	border: none;
+	cursor: pointer;
+	@include transition(all .2s ease-in-out);
+}
+
+.btn-primary-line {
+	@extend %btn-base;
+	background-color: transparent;
+	color: $blueLight;
+	border: 2px solid $blueLight;
+
+	&:hover {
+		background-color: transparentize($blueLight, .85);
+		@include translate(0, -5px);
+		box-shadow: $cardShadow;
+	}
+}
+

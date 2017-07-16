@@ -1,0 +1,20 @@
+// Card component 
+
+.card {
+	box-shadow: $cardShadow;
+	padding: 30px;
+	border-radius: 3px;
+
+	.card-title {
+		font-size: 1.65em;
+		margin: 0;
+	    font-weight: 400;
+	}
+
+	.card-info {
+		font-size: 1.2em;
+		font-weight: 300;
+		line-height: 1.35em;
+		margin: 25px 0;
+	}
+}

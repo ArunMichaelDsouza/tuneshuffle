@@ -11,7 +11,7 @@
 	    background-color: #fff;
 	    border-radius: 50%;
 	    border: 15px solid #fff;
-	    margin: -80px auto 30px;
+	    margin: -80px auto 60px;
 	    box-shadow: $cardShadow;
 	    background-image: url('../../public/img/logo.png');
 	    background-position: center;
@@ -25,5 +25,14 @@
 
 	.card-info {
 		color: #fff;
+		width: 85%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.btn-start {
+		text-transform: uppercase;
+		margin-top: 40px;
+		font-weight: 300;
 	}
 }
