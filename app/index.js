@@ -13,6 +13,7 @@ import './sass/base.scss';
 import Welcome from './components/Welcome.jsx';
 import Player from './components/Player.jsx';
 import NotFoundComponent from './components/NotFoundComponent.jsx';
+import Footer from './components/Footer.jsx';
 
 const initialState = { users: [] },
 	composeEnhancers = (typeof window === 'object' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({}) : compose,
@@ -25,14 +26,17 @@ store.dispatch({ type: constants.ACTIONS.INIT, payload: initialState });
 
 ReactDOM.render(
 	<Provider store={ store }>
-		<Router>
-			<Switch>
-				<Route path="/welcome" component={ Welcome }/>
-			    <Route path="/player" component={ Player }/>
-			    <Route path='/404' component={ NotFoundComponent }/>
-			    <Redirect from='*' to='/404'/>
-			</Switch>
-		</Router>
+		<div>
+			<Router>
+				<Switch>
+					<Route path="/welcome" component={ Welcome }/>
+				    <Route path="/player" component={ Player }/>
+				    <Route path='/404' component={ NotFoundComponent }/>
+				    <Redirect from='*' to='/404'/>
+				</Switch>
+			</Router>
+			<Footer/>
+		</div>
 	</Provider>, 
 document.getElementById('tuneshuffle-app'));
 
