@@ -9,7 +9,10 @@ const Welcome = () => {
 				Your offline solution to pair music streaming! Start a server, ask your friends to join in. Stream and share music together.
 			</div>
 			<div className="text-center">
-				<button className="btn-primary-line btn-start">Start Streaming</button>
+				<button className="btn-primary-line btn-start">
+					Start Streaming
+					<span className="lnr lnr-music-note"></span>
+				</button>
 			</div>
 		</section>
 	);

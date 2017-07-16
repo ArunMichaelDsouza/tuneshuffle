@@ -6,12 +6,12 @@
 	background-color: $primaryCardBg;
 
 	.logo {
-		width: 80px;
-		height: 80px;
+		width: 70px;
+		height: 70px;
 	    background-color: #fff;
 	    border-radius: 50%;
 	    border: 15px solid #fff;
-	    margin: -80px auto 60px;
+	    margin: -80px auto 30px;
 	    box-shadow: $cardShadow;
 	    background-image: url('../../public/img/logo.png');
 	    background-position: center;
@@ -34,5 +34,11 @@
 		text-transform: uppercase;
 		margin-top: 40px;
 		font-weight: 300;
+	}
+
+	.lnr-music-note {
+		font-size: 1.15em;
+		margin-left: 8px;
+		vertical-align: middle;
 	}
 }

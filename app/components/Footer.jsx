@@ -4,7 +4,9 @@ const Footer = () => {
 	return (
 		<footer className="footer">
 			<div className="pull-left">
-				Designed & Developed by
+				Designed & Developed with 
+				<span className="lnr lnr-heart"></span> 
+				by
 				<a target="_blank" href="https://twitter.com/amdsouza92">Arun Michael Dsouza</a>
 			</div>
 			<div className="pull-right">
