@@ -39,5 +39,5 @@ app.listen(constants.PORT, () => {
     console.log(`${color.blue(constants.APP_TITLE)} is running on port : ${color.yellow(constants.PORT)}`);
 
     // Open Tuneshuffle in browser window
-    opn(`http://localhost:${constants.PORT}/welcome`);
+    //opn(`http://localhost:${constants.PORT}/welcome`);
 });

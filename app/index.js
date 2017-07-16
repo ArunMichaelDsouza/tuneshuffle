@@ -7,9 +7,10 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import allReducers from './reducers/index';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Redirect, Switch, Route, Link } from 'react-router-dom';
 import Welcome from './components/Welcome.jsx';
 import Player from './components/Player.jsx';
+import NotFoundComponent from './components/NotFoundComponent.jsx';
 
 const initialState = { users: [] };
 
@@ -26,28 +27,20 @@ const store = createStore(allReducers, initialState, enhancer);
 
 store.dispatch({ type: 'INIT_STORE', payload: initialState });
 
-const NoMatch = () => {
-	return (
-		<div>no match</div>
-	);
-};
-
 ReactDOM.render(
 	<Provider store={store}>
 		<Router>
-			<div>
-		     	<ul>
-		        	<li><Link to="/welcome">welcome</Link></li>
-		        	<li><Link to="/player">player</Link></li>
-		      	</ul>
+			<Switch>
+				<Route exact path="/welcome" component={Welcome}/>
+			    <Route path="/player" component={Player}/>
+			    <Route path='/404' component={NotFoundComponent}/>
+			    <Redirect from='*' to='/404'/>
+			</Switch>
+		</Router>
+	</Provider>, 
+document.getElementById('app'));
 
-		      <hr/>
 
-		      <Switch>
-			      <Route exact path="/welcome" component={Welcome}/>
-			      <Route path="/player" component={Player}/>
-			      <Route component={NoMatch}/>
-			   </Switch>
-		    </div>
-		  </Router>
-	</Provider>, document.getElementById('app'));
+
+
+
