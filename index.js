@@ -7,7 +7,8 @@ const express = require('express'),
     app = express(),
     bodyParser = require('body-parser'),
     woodlot = require('woodlot').middlewareLogger,
-    cookieParser = require('cookie-parser');
+    cookieParser = require('cookie-parser'),
+    opn = require('opn');
 
 // Enable body/cookie parser middlewares
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -16,13 +17,7 @@ app.use(cookieParser());
 // Logger middleware
 app.use(woodlot({
     streams: ['./logs/tuneshuffle-server.log'],
-    stdout: true,
-    format: {
-        options: {
-            cookies: true,
-            headers: true
-        }
-    }
+    stdout: true
 }));
 
 // Enable api module
@@ -42,4 +37,7 @@ app.get('*', (req, res) => res.render('index'));
 // Run app server on specified port
 app.listen(constants.PORT, () => {
     console.log(`${color.blue(constants.APP_TITLE)} is running on port : ${color.yellow(constants.PORT)}`);
+
+    // Open Tuneshuffle in browser window
+    opn(`http://localhost:${constants.PORT}/welcome`);
 });
