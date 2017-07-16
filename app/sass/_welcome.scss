@@ -1,0 +1,29 @@
+// Tuneshuffle welcome route styles
+
+.intro-panel {
+	width: 600px;
+	margin: 120px auto 70px;
+	background-color: $primaryCardBg;
+
+	.logo {
+		width: 80px;
+		height: 80px;
+	    background-color: #fff;
+	    border-radius: 50%;
+	    border: 15px solid #fff;
+	    margin: -80px auto 30px;
+	    box-shadow: $cardShadow;
+	    background-image: url('../../public/img/logo.png');
+	    background-position: center;
+	    background-size: 100%;
+	}
+
+	.card-title {
+		color: #fff;
+	    text-transform: uppercase;
+	}
+
+	.card-info {
+		color: #fff;
+	}
+}

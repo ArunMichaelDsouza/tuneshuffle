@@ -9,6 +9,21 @@ module.exports = {
         loaders: [{
             test: /\.jsx?$/,
             loader: 'babel-loader'
+        }, {
+            test: /\.scss?$/,
+            use: [{
+                loader: 'style-loader'
+            }, {
+                loader: 'css-loader',
+                options: {
+                    minimize: true
+                }
+            }, {
+                loader: 'sass-loader'
+            }]
+        }, {
+            test: /\.(png|jpg|gif)$/,
+            loader: 'url-loader'
         }]
     },
     plugins: [

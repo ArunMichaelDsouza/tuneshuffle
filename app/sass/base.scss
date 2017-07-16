@@ -1,0 +1,39 @@
+// Tuneshuffle base styles
+
+@import 'normalize';
+@import '../../node_modules/pineapple-sass/build/pineapple-sass';
+@import 'variables';
+@import 'welcome';
+
+html {
+	font-size: 16px;
+}
+
+body {
+	@include linearGradient(135deg, $blueDark 0%,$blueLight 100%);
+	font-family: $lato;
+}
+
+.card {
+	box-shadow: $cardShadow;
+	padding: 30px;
+	border-radius: 3px;
+
+	.card-title {
+		font-size: 1.65em;
+		margin: 0;
+	    font-weight: 400;
+	}
+
+	.card-info {
+		font-size: 1.25em;
+		font-weight: 300;
+		line-height: 1.4em;
+		margin: 25px 0;
+		text-align: justify;
+	}
+}
+
+.text-center {
+	text-align: center;
+}
