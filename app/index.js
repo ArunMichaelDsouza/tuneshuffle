@@ -15,14 +15,12 @@ import Player from './components/Player.jsx';
 import NotFoundComponent from './components/NotFoundComponent.jsx';
 import Footer from './components/Footer.jsx';
 
-const initialState = { users: [] },
+const initialState = {},
 	composeEnhancers = (typeof window === 'object' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({}) : compose,
 	enhancer = composeEnhancers(
 		applyMiddleware(thunk)
 	),
 	store = createStore(allReducers, initialState, enhancer);
-
-store.dispatch({ type: constants.ACTIONS.INIT, payload: initialState });
 
 ReactDOM.render(
 	<Provider store={ store }>
