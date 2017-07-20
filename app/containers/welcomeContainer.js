@@ -5,10 +5,15 @@ import { connect } from 'react-redux';
 import Welcome from '../components/Welcome.jsx';
 import { getAdmin } from '../actions/userActions';
 
-const matchDispatchToProps = dispatch => {
-	return bindActionCreators({
-		getAdmin
-	}, dispatch);
-};
+const mapStateToProps = state => {
+		return {
+			admin: state.users.admin
+		};
+    },
+    matchDispatchToProps = dispatch => {
+        return bindActionCreators({
+            getAdmin
+        }, dispatch);
+    };
 
-export default connect(() => {}, matchDispatchToProps)(Welcome);
+export default connect(mapStateToProps, matchDispatchToProps)(Welcome);
