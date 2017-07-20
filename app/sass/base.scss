@@ -14,7 +14,7 @@ html {
 }
 
 body {
-	@include linearGradient(135deg, $blueDark 0%,$blueLight 100%);
+	@include linearGradient(135deg, $blueLight 0%,$blueDark 100%);
 	font-family: $lato;
 }
 
@@ -22,7 +22,7 @@ a {
 	color: $blueLight;
 }
 
-.footer {
+footer {
 	background-color: $primaryCardBg;
 	padding: 20px;
 	position: fixed;
