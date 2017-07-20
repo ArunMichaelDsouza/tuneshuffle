@@ -7,40 +7,59 @@
 @import 'card';
 @import 'buttons';
 @import 'welcome';
+@import 'iconography';
 
 html {
-	height: 100%;
-	font-size: 16px;
+    height: 100%;
+    font-size: 16px;
 }
 
 body {
-	@include linearGradient(135deg, $blueLight 0%,$blueDark 100%);
-	font-family: $lato;
+    @include linearGradient(135deg, $blueLight 0%, $blueDark 100%);
+    font-family: $lato;
 }
 
 a {
-	color: $blueLight;
+    color: $blueLight;
 }
 
 footer {
-	background-color: $primaryCardBg;
-	padding: 20px;
-	position: fixed;
-	bottom: 0;
-	width: 100%;
-	@include boxSizing(border-box);
-	color: #fff;
-	font-weight: 300;
+    background-color: $primaryCardBg;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    @include boxSizing(border-box);
+    color: #fff;
+    font-weight: 300;
 
-	a {
-		display: inline-block;
-		margin: 0 5px;
-	}
+    a {
+        display: inline-block;
+        margin: 0 5px;
+    }
 
-	.lnr-heart {
-		color: $redDark;
-		margin: 0 7px;
-		vertical-align: middle;
+    .icon-heart {
+    	margin: 0 7px;
+    	vertical-align: middle;
+    }
+}
+
+.not-found-error {
+	.icon-warning {
+		font-size: 4em;
+		margin-bottom: 20px;
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
 

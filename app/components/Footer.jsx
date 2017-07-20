@@ -5,7 +5,7 @@ const Footer = () => {
 		<footer>
 			<div className="pull-left">
 				Designed & Developed with 
-				<span className="lnr lnr-heart"></span> 
+				<span className="lnr lnr-heart icon-heart"></span> 
 				by
 				<a target="_blank" href="https://twitter.com/amdsouza92">Arun Michael Dsouza</a>
 			</div>
