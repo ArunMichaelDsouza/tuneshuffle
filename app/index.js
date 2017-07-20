@@ -10,7 +10,7 @@ import allReducers from './reducers/index';
 import { BrowserRouter as Router, Redirect, Switch, Route, Link } from 'react-router-dom';
 
 import './sass/base.scss';
-import Welcome from './components/Welcome.jsx';
+import WelcomeContainer from './containers/welcomeContainer';
 import Player from './components/Player.jsx';
 import NotFoundComponent from './components/NotFoundComponent.jsx';
 import Footer from './components/Footer.jsx';
@@ -29,7 +29,7 @@ ReactDOM.render(
 		<div>
 			<Router>
 				<Switch>
-					<Route path="/welcome" component={ Welcome }/>
+					<Route path="/welcome" component={ WelcomeContainer }/>
 				    <Route path="/player" component={ Player }/>
 				    <Route path='/404' component={ NotFoundComponent }/>
 				    <Redirect from='*' to='/404'/>
