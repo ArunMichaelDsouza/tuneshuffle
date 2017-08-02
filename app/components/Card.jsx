@@ -12,7 +12,7 @@ class Card extends React.Component {
 		const { props } = this;
 
 		return (
-			<section className="card intro-panel">
+			<section className="card info-panel">
 				{
 					props.showLogo ? (<div className="logo"></div>) : ''
 				}

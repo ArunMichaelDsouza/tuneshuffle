@@ -29,7 +29,19 @@ class Welcome extends React.Component {
 					</div>
 				</Card>
 			) : (
-				<h1>create admin</h1>
+				<Card title="Lets make you the Admin!" text="Tuneshuffle needs an admin to control and manage the streaming media, just enter your name to become the admin!">
+					<form>
+						<div className="text-center">
+							<div className="input-wrapper">
+								<input className="input-name" type="text" placeholder="Enter your name" required />
+							</div>
+							<button className="btn-primary-line btn-start">
+								Create Admin
+								<span className="lnr lnr-user"></span>
+							</button>
+						</div>
+					</form>
+				</Card>
 			);
 
 		return this.props.admin ? <Player /> : intro;

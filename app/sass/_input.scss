@@ -1,0 +1,18 @@
+// Input styles
+
+.input-wrapper {
+	display: block;
+}
+
+input {
+	border: 2px solid $blueLight;
+	background: none;
+	padding: 10px;
+	border-radius: 3px;
+	color: #fff;
+	font-weight: 300;
+
+	&:focus {
+		outline: none;
+	}
+}

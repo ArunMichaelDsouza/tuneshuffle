@@ -1,6 +1,6 @@
 // Tuneshuffle welcome route styles
 
-.intro-panel {
+.info-panel {
 	width: 600px;
 	margin: 120px auto 70px;
 	background-color: $primaryCardBg;
@@ -32,13 +32,23 @@
 
 	.btn-start {
 		text-transform: uppercase;
-		margin-top: 40px;
 		font-weight: 300;
 	}
 
-	.lnr-music-note {
+	.lnr {
 		font-size: 1.15em;
 		margin-left: 8px;
 		vertical-align: middle;
 	}
+
+	.input-name {
+		width: 70%;
+		box-sizing: border-box;
+		margin: 0 auto;
+		margin: 15px 0;
+	}
 }
+
+
+
+
