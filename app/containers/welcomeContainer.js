@@ -3,7 +3,7 @@
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import Welcome from '../components/Welcome.jsx';
-import { getAdmin } from '../actions/userActions';
+import { getAdmin, setAdmin } from '../actions/userActions';
 
 const mapStateToProps = state => {
 		return {
@@ -12,7 +12,8 @@ const mapStateToProps = state => {
     },
     matchDispatchToProps = dispatch => {
         return bindActionCreators({
-            getAdmin
+            getAdmin,
+            setAdmin
         }, dispatch);
     };
 

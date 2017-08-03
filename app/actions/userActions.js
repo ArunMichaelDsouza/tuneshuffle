@@ -24,4 +24,4 @@ const USER = ACTIONS.USER,
         };
     };
 
-export { getAdmin };
+export { getAdmin, setAdmin };

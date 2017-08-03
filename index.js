@@ -12,6 +12,7 @@ const express = require('express'),
 
 // Enable body/cookie parser middlewares
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 app.use(cookieParser());
 
 // Logger middleware

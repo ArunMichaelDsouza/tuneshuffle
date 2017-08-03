@@ -18,8 +18,11 @@ class Welcome extends React.Component {
 		this.setState({ showAdminPane: true });
 	}
 
-	createAdmin() {
-		
+	createAdmin(e) {
+		e.preventDefault();
+
+		const name = this.refs.name.value;
+		this.props.setAdmin(name);
 	}
 
 	render() {
@@ -35,12 +38,12 @@ class Welcome extends React.Component {
 				</Card>
 			) : (
 				<Card title="Lets make you the Admin!" text="Tuneshuffle needs an admin to control and manage the streaming media, just enter your name to become the admin!">
-					<form>
+					<form onSubmit={this.createAdmin}>
 						<div className="text-center">
 							<div className="input-wrapper">
-								<input className="input-name" type="text" placeholder="Enter your name" required />
+								<input ref="name" className="input-name" type="text" placeholder="Enter your name" required />
 							</div>
-							<button onClick={this.createAdmin} className="btn-primary-line btn-start">
+							<button className="btn-primary-line btn-start">
 								Create Admin
 								<span className="lnr lnr-user"></span>
 							</button>
