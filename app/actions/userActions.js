@@ -19,7 +19,7 @@ const USER = ACTIONS.USER,
         	const request = axios.post(adminRequest, { name });
 
             request.then(data => {
-                dispatch({ type: USER.GET_ADMIN, payload: data.data });
+                dispatch({ type: USER.SET_ADMIN, payload: data.data });
             });
         };
     };

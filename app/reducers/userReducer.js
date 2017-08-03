@@ -3,7 +3,8 @@
 const userReducer = (state = {}, action) => {
     switch (action.type) {
         case 'GET_ADMIN':
-            return { ...state, 'admin': action.payload.data, 'allUsers': [] };
+        case 'SET_ADMIN':
+            return { ...state, 'admin': action.payload.data, 'allUsers': [] };        
         default:
             return state;
     }
