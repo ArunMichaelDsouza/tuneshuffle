@@ -11,8 +11,13 @@ input {
 	border-radius: 3px;
 	color: #fff;
 	font-weight: 300;
+	@include transition(all .2s ease-in-out);
+	@include placeholder {
+    	color: $greyLight;
+    }
 
 	&:focus {
 		outline: none;
+		background-color: transparentize($blueLight, .85);
 	}
 }

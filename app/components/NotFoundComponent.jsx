@@ -1,8 +1,10 @@
+// Not found component
+
 import React from 'react';
 
 const NotFoundComponent = () => {
 	return (
-		<section className="card intro-panel not-found-error text-center">
+		<section className="card info-panel not-found-error text-center">
 			<h1 className="card-title">404 Error!</h1>
 			<div className="card-info">
 				<div className="lnr lnr-warning icon-warning"></div>

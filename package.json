@@ -20,6 +20,7 @@
     "react-router-dom": "^4.1.1",
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0",
+    "uuid": "^3.1.0",
     "woodlot": "^3.0.3"
   },
   "devDependencies": {

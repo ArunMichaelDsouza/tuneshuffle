@@ -11,10 +11,15 @@ class Welcome extends React.Component {
 	    this.props.getAdmin();
 
 	    this.switchIntro = this.switchIntro.bind(this);
+	    this.createAdmin = this.createAdmin.bind(this);
 	}
 
 	switchIntro() {
 		this.setState({ showAdminPane: true });
+	}
+
+	createAdmin() {
+		
 	}
 
 	render() {
@@ -35,7 +40,7 @@ class Welcome extends React.Component {
 							<div className="input-wrapper">
 								<input className="input-name" type="text" placeholder="Enter your name" required />
 							</div>
-							<button className="btn-primary-line btn-start">
+							<button onClick={this.createAdmin} className="btn-primary-line btn-start">
 								Create Admin
 								<span className="lnr lnr-user"></span>
 							</button>
@@ -49,3 +54,5 @@ class Welcome extends React.Component {
 }
 
 export default Welcome;
+
+
