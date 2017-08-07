@@ -6,9 +6,9 @@
 @import 'card';
 @import 'buttons';
 @import 'input';
-@import 'welcome';
 @import 'iconography';
 @import 'loader';
+@import 'player';
 
 html {
     height: 100%;
@@ -22,6 +22,12 @@ body {
 
 a {
     color: $blueLight;
+}
+
+.container {
+    position: relative;
+    width: 1170px;
+    margin: 0 auto;
 }
 
 footer {
@@ -42,6 +48,55 @@ footer {
     .icon-heart {
         margin: 0 7px;
         vertical-align: middle;
+    }
+}
+
+.info-panel {
+    width: 600px;
+    margin: 120px auto 70px;
+    background-color: $primaryCardBg;
+
+    .logo {
+        width: 70px;
+        height: 70px;
+        background-color: #fff;
+        border-radius: 50%;
+        border: 15px solid #fff;
+        margin: -80px auto 30px;
+        box-shadow: $cardShadow;
+        background-image: url('../../public/img/logo.png');
+        background-position: center;
+        background-size: 100%;
+    }
+
+    .card-title {
+        color: #fff;
+        text-transform: uppercase;
+    }
+
+    .card-info {
+        color: #fff;
+        width: 85%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .btn-start {
+        text-transform: uppercase;
+        font-weight: 300;
+    }
+
+    .lnr {
+        font-size: 1.15em;
+        margin-left: 8px;
+        vertical-align: middle;
+    }
+
+    .input-name {
+        width: 70%;
+        box-sizing: border-box;
+        margin: 0 auto;
+        margin: 15px 0;
     }
 }
 

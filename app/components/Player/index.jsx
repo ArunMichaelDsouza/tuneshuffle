@@ -1,10 +1,15 @@
 // Media player component
 
 import React from 'react';
+import Wavesurfer from './Wavesurfer.jsx';
+import Playlist from './Playlist.jsx';
 
 const Player = () => {
 	return (
-		<div>Welcome to the player</div>
+		<section className="container">
+			<Wavesurfer />
+			<Playlist />
+		</section>
 	);
 };
 

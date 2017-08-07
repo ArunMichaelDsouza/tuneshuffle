@@ -1,0 +1,19 @@
+// Media player styles
+
+.wavesurfer {
+	background-color: $primaryCardBg;
+	width: 60%;
+    position: absolute;
+    top: 120px;
+    left: 10%;
+    height: 250px;
+}
+
+.playlist {
+	background-color: #fff;
+	width: 20%;
+    position: absolute;
+    top: 60px;
+    right: 10%;
+    height: 400px;
+}
