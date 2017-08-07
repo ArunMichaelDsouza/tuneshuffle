@@ -11,7 +11,7 @@ import { BrowserRouter as Router, Redirect, Switch, Route, Link } from 'react-ro
 
 import './sass/base.scss';
 import WelcomeContainer from './containers/welcomeContainer';
-import Player from './components/Player.jsx';
+import Player from './components/Player/index.jsx';
 import NotFoundComponent from './components/NotFoundComponent.jsx';
 import Footer from './components/Footer.jsx';
 
@@ -27,7 +27,7 @@ ReactDOM.render(
 		<div>
 			<Router>
 				<Switch>
-					<Route path="/welcome" component={ WelcomeContainer }/>
+					<Route path="/welcome" component={ WelcomeContainer } />
 				    <Route path="/player" component={ Player }/>
 				    <Route path='/404' component={ NotFoundComponent }/>
 				    <Redirect from='*' to='/404'/>

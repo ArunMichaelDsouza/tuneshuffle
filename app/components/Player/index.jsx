@@ -1,3 +1,5 @@
+// Media player component
+
 import React from 'react';
 
 const Player = () => {

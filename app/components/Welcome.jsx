@@ -1,9 +1,9 @@
 // Welcome component
 
 import React from 'react';
-import Player from './Player.jsx';
 import Card from './Card.jsx';
 import Loader from './Loader.jsx';
+import { Redirect } from 'react-router-dom';
 
 class Welcome extends React.Component {
 	constructor(props) {
@@ -55,7 +55,7 @@ class Welcome extends React.Component {
 			),
 			init = (admin === undefined) ? <Loader/> : intro;
 
-		return this.props.admin ? <Player /> : init;
+		return this.props.admin ? <Redirect to='/player'/> : init;
 	}
 }
 
