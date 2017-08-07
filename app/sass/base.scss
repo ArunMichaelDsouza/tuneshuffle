@@ -1,5 +1,4 @@
 // Tuneshuffle base styles
-
 @import 'normalize';
 @import '../../node_modules/pineapple-sass/build/pineapple-sass';
 @import 'variables';
@@ -9,6 +8,7 @@
 @import 'input';
 @import 'welcome';
 @import 'iconography';
+@import 'loader';
 
 html {
     height: 100%;
@@ -40,27 +40,17 @@ footer {
     }
 
     .icon-heart {
-    	margin: 0 7px;
-    	vertical-align: middle;
+        margin: 0 7px;
+        vertical-align: middle;
     }
 }
 
 .not-found-error {
-	.icon-warning {
-		font-size: 4em;
-		margin-bottom: 20px;
-	}
+    .icon-warning {
+        font-size: 4em;
+        margin-bottom: 20px;
+    }
 }
-
-
-
-
-
-
-
-
-
-
 
 
 

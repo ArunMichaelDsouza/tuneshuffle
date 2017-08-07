@@ -3,13 +3,14 @@
 import React from 'react';
 import Player from './Player.jsx';
 import Card from './Card.jsx';
+import Loader from './Loader.jsx';
 
 class Welcome extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = { showAdminPane: false };
-	    this.props.getAdmin();
 
+	    this.props.getAdmin();
 	    this.switchIntro = this.switchIntro.bind(this);
 	    this.createAdmin = this.createAdmin.bind(this);
 	}
@@ -27,6 +28,7 @@ class Welcome extends React.Component {
 
 	render() {
 		const { showAdminPane } = this.state,
+			{ admin } = this.props,
 			intro = !showAdminPane ? (
 				<Card  title="Welcome to Tuneshuffle!" text="Your offline solution to pair music streaming! Start a server, ask your friends to join in. Stream and share music together.">
 					<div className="text-center">
@@ -50,9 +52,10 @@ class Welcome extends React.Component {
 						</div>
 					</form>
 				</Card>
-			);
+			),
+			init = (admin === undefined) ? <Loader/> : intro;
 
-		return this.props.admin ? <Player /> : intro;
+		return this.props.admin ? <Player /> : init;
 	}
 }
 
