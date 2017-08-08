@@ -3,7 +3,7 @@
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import Welcome from '../components/Welcome.jsx';
-import { getAdmin, setAdmin } from '../actions/userActions';
+import { setAdmin } from '../actions/userActions';
 
 const mapStateToProps = state => {
 		return {
