@@ -2,9 +2,11 @@
 
 import { combineReducers } from 'redux';
 import userReducer from './userReducer';
+import playlistReducer from './playlistReducer';
 
 const allReducers = combineReducers({
-    users: userReducer
+    users: userReducer,
+    playlist: playlistReducer
 });
 
 export default allReducers;
