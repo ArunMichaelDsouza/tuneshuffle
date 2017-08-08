@@ -12,7 +12,6 @@ const mapStateToProps = state => {
     },
     matchDispatchToProps = dispatch => {
         return bindActionCreators({
-            getAdmin,
             setAdmin
         }, dispatch);
     };

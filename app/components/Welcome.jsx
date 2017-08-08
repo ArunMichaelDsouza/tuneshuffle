@@ -10,7 +10,6 @@ class Welcome extends React.Component {
 		super(props);
 		this.state = { showAdminPane: false };
 
-	    this.props.getAdmin();
 	    this.switchIntro = this.switchIntro.bind(this);
 	    this.createAdmin = this.createAdmin.bind(this);
 	}
@@ -52,10 +51,10 @@ class Welcome extends React.Component {
 						</div>
 					</form>
 				</Card>
-			),
-			init = (admin === undefined) ? <Loader/> : intro;
+			);
+			//init = (admin === undefined) ? <Loader/> : intro;
 
-		return this.props.admin ? <Redirect to='/player'/> : init;
+		return this.props.admin ? <Redirect to='/player'/> : intro;
 	}
 }
 
