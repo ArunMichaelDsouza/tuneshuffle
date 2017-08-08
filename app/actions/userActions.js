@@ -22,6 +22,13 @@ const USER = ACTIONS.USER,
                 dispatch({ type: USER.SET_ADMIN, payload: data.data });
             });
         };
+    },
+    getAllUsers = () => {
+        return dispatch => {
+            axios.get(`${API.ENDPOINT}${API.USER}/all`).then(data => {
+                dispatch({ type: USER.GET_ALL_USERS, payload: data.data });
+            });
+        };
     };
 
-export { getAdmin, setAdmin };
+export { getAdmin, setAdmin, getAllUsers };
