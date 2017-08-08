@@ -6,13 +6,17 @@ import { API, ACTIONS } from '../../lib/constants';
 const USER = ACTIONS.USER,
 	adminRequest = `${API.ENDPOINT}${API.USER}/admin`,
     getAdmin = () => {
+        
         return dispatch => {
         	const request = axios.get(adminRequest);
 
             request.then(data => {
-                dispatch({ type: USER.GET_ADMIN, payload: data.data });
+                    setTimeout(function() {
+                    dispatch({ type: USER.GET_ADMIN, payload: data.data });
+                }, 2000);
             });
         };
+        
     },
     setAdmin = name => {
     	return dispatch => {

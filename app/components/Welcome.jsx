@@ -2,7 +2,6 @@
 
 import React from 'react';
 import Card from './Card.jsx';
-import Loader from './Loader.jsx';
 import { Redirect } from 'react-router-dom';
 
 class Welcome extends React.Component {
@@ -27,7 +26,6 @@ class Welcome extends React.Component {
 
 	render() {
 		const { showAdminPane } = this.state,
-			{ admin } = this.props,
 			intro = !showAdminPane ? (
 				<Card  title="Welcome to Tuneshuffle!" text="Your offline solution to pair music streaming! Start a server, ask your friends to join in. Stream and share music together.">
 					<div className="text-center">
@@ -52,7 +50,6 @@ class Welcome extends React.Component {
 					</form>
 				</Card>
 			);
-			//init = (admin === undefined) ? <Loader/> : intro;
 
 		return this.props.admin ? <Redirect to='/player'/> : intro;
 	}

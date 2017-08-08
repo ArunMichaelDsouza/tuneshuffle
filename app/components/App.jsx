@@ -2,11 +2,12 @@
 
 import React from 'react';
 import '../sass/base.scss';
-import WelcomeContainer from '../containers/welcomeContainer';
+import WelcomeContainer from '../containers/WelcomeContainer';
 import Player from './Player/index.jsx';
 import NotFoundComponent from './NotFoundComponent.jsx';
 import Footer from './Footer.jsx';
 import { BrowserRouter as Router, Redirect, Switch, Route } from 'react-router-dom';
+import Loader from './Loader.jsx';
 
 class App extends React.Component {
 	constructor(props) {
@@ -14,11 +15,15 @@ class App extends React.Component {
 	}
 
 	componentDidMount() {
-		
+		this.props.getAdmin();
+		this.props.getAllUsers();
 	}
 
 	render() {
-		return (
+		const { admin, allUsers } = this.props;
+
+		const appContainer = (admin === undefined && allUsers === undefined) ? 
+			<Loader /> : 
 			<div>
 				<Router>
 					<Switch>
@@ -29,8 +34,9 @@ class App extends React.Component {
 					</Switch>
 				</Router>
 				<Footer />
-			</div>
-		);
+			</div>;
+
+		return appContainer;
 	}
 }
 

@@ -6,6 +6,7 @@ import Welcome from '../components/Welcome.jsx';
 import { setAdmin } from '../actions/userActions';
 
 const mapStateToProps = state => {
+		console.log(state.users.admin);
 		return {
 			admin: state.users.admin
 		};
