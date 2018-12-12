@@ -22,15 +22,17 @@ class App extends React.Component {
 	render() {
 		const { admin, allUsers } = this.props;
 
-		const appContainer = (admin === undefined && allUsers === undefined) ? 
-			<Loader /> : 
+		const appContainer = (admin === undefined && allUsers === undefined) ?
+			<Loader /> :
 			<div>
 				<Router>
 					<Switch>
-						<Route path="/welcome" component={ WelcomeContainer } />
-						<Route path="/player" component={ Player }/>
-						<Route path='/404' component={ NotFoundComponent }/>
-						<Redirect from='*' to='/404'/>
+						<Route path="/welcome" component={WelcomeContainer} />
+						{
+							admin ? <Route path="/player" component={Player} /> : <Redirect from='/player' to='/welcome' />
+						}
+						<Route path='/404' component={NotFoundComponent} />
+						<Redirect from='*' to='/404' />
 					</Switch>
 				</Router>
 				<Footer />
